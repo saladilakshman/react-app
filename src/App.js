@@ -87,7 +87,7 @@ export default function Demo() {
           /*opening the camera when the clicks on the button using mediaDevices API */
           navigator.mediaDevices.getUserMedia({video:true,width:100,height:100})
           .then(mediastream=>{
-            let receivedMediaStream;
+            let receivedMediaStream=medistream;
             const video=document.createElement('video');
             const camera=document.querySelector('.camera');
             const closeCamera=document.querySelector('.camera-close');

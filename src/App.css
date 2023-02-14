@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.app{
+  margin:0;
+  margin-block-end:2rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main{
+  padding:1rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h2{
+  text-align:center;
+  font-family:'helvetica';
+  background-color:#8338EC;
+  color:white;
+  padding:0.2rem;
+  margin-bottom:3rem;
+}
+.search-box{
+  display:flex;
+  gap:0.5rem;
+  justify-content:center;
+  align-items:center;
+}
+.search-bar{
+  width:20rem;
+  box-shadow:0px 0px 5px rgba(0,0,0,0.25);
+  border:none;
+  border-radius:0.2rem;
+  padding:0.4rem;
+}
+.search-bar:focus{
+  outline:none;
+}
+.search-button{
+  border:none;
+  background-color:#3A86FF;
+  min-width:6rem;
+  color:white;
+  font-family:'helvetica';
+ height:2.3rem;
+  border-radius:0.2rem;
+}
+.grid-gallery{ 
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ grid-gap:2rem;
+ place-items:center;
+}
+img{
+  width:20rem;
+  height:20rem;
+  object-fit:cover;
+  -webkit-aspect-ratio:16/9;
+  aspect-ratio:16/9;
+}
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  z-index:1;
+}
+.overlay-content{
+display:block;
+margin:auto;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%)
+}
+.overlay-image{
+  width:40rem;
+  height:40rem;
+}
+.icons{
+  color:white;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:5rem;
+  font-size:1.2rem;
+  padding:2rem;
+  cursor:pointer;
+}
+.icons:hover{
+  opacity:0.5;
+transition:1.5s;  
+}
+#close{
+  font-size:1.2rem;
+}
+.add-photo{
+  width:20rem;
+  height:20rem;
+  background:whitesmoke;
+  text-align:center;
+}
+h6{
+  margin-top:10rem;
+  font-family:'helvetica';
+  color:#4E5283;
+  font-size:2rem;
+  cursor:pointer;
+}
+.add-photo:hover>h6{
+  opacity:0.5;
+  color:black;
+}
+.camera-overlay{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:99;
+  display:flex;
+ flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.camera{
+  width:40rem;
+  height:40rem;
+  box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+  background:white;
+}
+video{
+  width:40rem;
+  height:40rem;
+  object-fit:fill;
+}
+.camera-close{
+  color:white;
+  font-size:1.4rem;
+}
+.camera-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:0.5rem;
+}
+.capture-photo{
+  border:none;
+  color:white;
+  background-color:#4E5283;
+  border-radius:0.2rem;
+  margin-block-start:1rem;
+}
+@media only screen and (max-width:476px){
+  .grid-gallery{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
   }
-}
+  .icons{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:1.5rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  .overlay-image{
+    width:20rem;
+    height:20rem;
+    object-fit:cover;
+  }
+  .camera{
+    width:320px;
+    height:320px;
+  }
+  video{
+    width:100%;
+    height:100%;
+    object-fit:fill;
   }
 }
