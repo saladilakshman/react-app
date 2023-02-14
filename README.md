@@ -1,3 +1,8 @@
+An image gallery app build using pixabay API and added additional features like downloading the image, sharing the image and even add your own photo using Image capture web API.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
